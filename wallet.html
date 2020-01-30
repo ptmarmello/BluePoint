@@ -1,0 +1,92 @@
+  {% load static %}
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dart - page</title>
+    <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+    
+    <link rel="stylesheet" href="{% static 'Usuarios/assets/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Usuarios/assets/flat-icon/flaticon.css'%}">
+    <link rel="stylesheet" href="{% static 'Usuarios/temp/styles/styles.css' %}">
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="{% static 'Usuarios/css/animate.css' %}">
+
+
+  </head>
+  <body>
+    <div class="main-wrapper">
+
+      <nav class="navbar-default navbar-fixed-top">
+            <div class="bluepoint-nav">
+              <a  href="#">BLUEPOINT</a>
+            </div>
+        </nav>
+        
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="icon-bar navbar-fixed-bottom">
+  <a href="#"><i class="fa fa-home"></i></a>
+  <a class="active" href="#"><i class="fa fa-list"></i></a>
+  <a href="#"><i class="fa fa-bank"></i></a>
+  <a href="#"><i class="fa fa-bank"></i></a>
+</div>
+
+
+
+
+        <section class="letsGo letsGo--bg">
+          <div class="container">
+            <div class="page-section page-section--small text-center">
+              <h2 class="page-section__title--white page-section__title--white--less-margin">CARTEIRA <br> SEU SALDO É: <br> <br> 2549 bluecoins</h2>
+              <p class="page-section__paragraph page-section__paragraph--less-padding">Gaste com o que bem entender</p>
+              <a class="button button--hover" href="#">LETS GO</a>
+            </div>
+          </div>
+        </section>
+
+        
+
+
+        <div class="container">
+          <section class="project">
+            <div class="page-section2">
+              <div class="text-center-2"> 
+               <!-- STYLES.CSS LINHA 331 -->
+                <h2 class="page-section__title">SEUS PRODUTOS:</h2>
+                <p class="page-section__paragraph">Produto 1</p>
+              </div>
+          </section>
+        </div>
+        
+
+        <div  class="col-md-6 col-lg-3" style="padding-bottom: 80px">       {% for produtos in produtos %}
+                  <div  class="thumbnail">
+                    <a href="{% static 'Usuarios/assets/images/team-pic2.png' %}" target="_blank">
+                      <img src="{% static 'Usuarios/assets/images/team-pic2.png' %}" alt="">
+                      <div class="caption team__caption">
+                        <h4 class="team__name">{{produtos.name}}</h4>
+                        <p class="team__title">{{ produtos.product_desc}}</p>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              {% endfor %}
+          </div>
+      
+    
+
+    <script src="{% static 'Usuarios/assets/jquery/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'Usuarios/assets/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    
+  </body>
+  </html>
+
+
+
+
+
