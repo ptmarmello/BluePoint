@@ -1443,6 +1443,7 @@ img {
 .thumbnail>img {
 	display: block;
 	max-width: 100%;
+
 	height: auto
 }
 
@@ -1672,6 +1673,9 @@ mark {
 	text-align: center;
     padding-top: -20px;
 }
+
+
+
 
 .text-justify {
 	text-align: justify
@@ -3149,7 +3153,7 @@ output {
 
 .form-control {
 	display: block;
-	width: 100%;
+	width: 70%;
 	height: 34px;
 	padding: 6px 12px;
 	font-size: 14px;
