@@ -42,8 +42,8 @@ Stage
 }
 
 h1 {
-  padding: 30px;
-  font-size: 60px;
+  padding: 60px;
+  font-size: 70px;
   text-transform: uppercase;
   text-align: center;
   color: #1c222b;
@@ -75,12 +75,14 @@ h1 strong {
   color: #eee;
   outline: none;
   padding: 100px 40px 0;
+
 }
 .item .ico {
   margin: 0 auto;
-  height: 160px;
+  height: 160px; 
   text-align: center;
   position: relative;
+
 }
 .item .ico svg {
   width: 130px;
@@ -90,11 +92,13 @@ h1 strong {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+
 }
 .item .tit {
   font-size: 15px; 
   color: #FA6B5B;
   margin-bottom: 20px;
+  
 }
 .item .text {
   font-size: 16px;
