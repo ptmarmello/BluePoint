@@ -597,13 +597,13 @@ PAG SECTION2 PAG CARTEIRA*/
 .gutters-30.row{
   margin-right: -5px;
   margin-left: -5px;
-  padding-top: 30px;
-}
+/*  padding-top: 30px;
+*/}
 
 .gutters-30 > [class^="col-"], .gutters-30 > [class^="col-"]{
   padding-right: 25px;
   padding-left: 25px;
-  height: 240px;
+  height: 190px;
 }
 
 
