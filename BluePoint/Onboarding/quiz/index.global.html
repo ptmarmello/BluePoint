@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <title>GUIDE_LINE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="assets/css/main.css">
+
+<!-- CALENDÁRIO -->
+  <link rel="stylesheet" href="calendario/css/pickmeup.css" type="text/css" />
+  <link rel="stylesheet" media="screen" type="text/css" href="calendario/demo/demo.css" />
+  <script type="text/javascript" src="calendario/js/pickmeup.js"></script>
+  <script type="text/javascript" src="calendario/demo/demo.js"></script>
+
+
+</head>
+<!-- IMPEDIR SCROLL PRIMEIRA PAG -->
+<body scroll="no" style="overflow: hidden">
+
+
+<!-- FUC APAGAR UMA PAG ACENDE A OUTRA, 2 PAGS MESMO INDEX -->
+<script type="text/javascript">
+  function esconder(){
+    var x = document.getElementById("1pag");
+    var y = document.getElementById("2pag")
+  
+    if (x.style.display === "none") {
+    x.style.display = "block";
+    y.style.display = "none"
+  } else {
+    x.style.display = "none";
+    y.style.display = "block";
+  }
+  }    
+
+
+// <!-- FUNC IMAGEM DE ACORDO COM RADIO BOTAO SELECIONADO -->
+      window.obj = function( img ){
+      valor = "<img class='' src = 'assets/img/objetivos/"+ img +".png' style='width:110%;'>"
+
+      document.getElementById( 'report' ).innerHTML = valor;
+    }
+</script>
+
+
+
+
+
+<div id="1pag" >
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport" style="background-color: #0c0c0c">
+      <div class="hire">
+        <li  style="list-style-type: none;">                    
+          <div >
+              <div>
+                <h2>Qual seu objetivo financeiro para esse mês?</h2>
+                <br>
+                <h3>Esta informação nos permitirá uma melhor personalização de sua rotina.</h3>
+
+        
+                <div class="work-request--options">
+                  
+ <span class="options-a">
+                    <input id="opt-11" type="radio" name="meta" value="1000" onclick="javascript: obj(1);">
+                  <!-- UM INVISIVEL PRA NAO ATRAPALHAR PAG INICIAL, NAO SEI EXPLICAR O PQ MAS DEU CERTO -->
+
+                  <span class="options-a">
+                    <input id="opt-1" type="radio" name="meta" value="1000" onclick="javascript: obj(1000);">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 1.000,00
+                    </label>
+
+
+                    <input id="opt-2" type="radio" name="meta" value="1500" onclick="javascript: obj(1500);">
+                    <label for="opt-2">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 1.500,00
+                    </label>
+
+
+                    <input id="opt-3" type="radio" name="meta" value="2000" onclick="javascript: obj(2000);">
+                    <label for="opt-3">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 2.000,00
+                    </label>
+                  </span>
+
+
+                  <span class="options-b">
+                    <input id="opt-4" type="radio" name="meta" value="2500" onclick="javascript: obj(2500);">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                       R$ 2.500,00
+                    </label>
+
+                    <input id="opt-5" type="radio" name="meta" value="3000" onclick="javascript: obj(3000);">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 3.000,00
+                    </label>
+
+
+                    <input id="opt-6" type="radio" name="meta" value="3500" onclick="javascript: obj(3500);">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 3.500,00
+                    </label>
+
+                    
+                    <span class="options-c">
+                    <input id="opt-7" type="radio" name="meta" value="4000" onclick="javascript: obj(4000);">
+                    <label for="opt-7">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 4.000,00
+                    </label>
+
+                    <input id="opt-8" type="radio" name="meta" value="4500" onclick="javascript: obj(4500);">
+                    <label for="opt-8">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 4.500,00
+                    </label>
+
+
+                    <input id="opt-9" type="radio" name="meta" value="5000" onclick="javascript: obj(5000);">
+                    <label for="opt-9">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                       MAIS DE R$4,5 MIL
+                    </label>
+
+                  </span>
+                      <br>
+                      <br>
+                      <button onclick="esconder()" class= "botao"> Continuar </button>
+              </div>
+          
+          </li>
+            </div>
+          </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+<div  class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="assets/img/logo copy copy.png" alt="Global">
+            <p>GUIDE_LINE</p>
+          </a>
+         <!--  <button class="header--cta cta">Hire Us</button> -->
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Resumo</span></li>
+            <li><span>Rotina</span></li>
+            <li><span>Ganhos</span></li>
+            <li><span>Dicas</span></li>
+            <li><span>Progresso</span></li>
+            <li><span>Planejamento</span></li>
+            <li><span>Campanhas</span></li>
+          </ul>
+        </nav>
+
+<!--  1 - RESUMO /// -->
+
+        <ul class="l-main-content main-content">
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <h1>Bem-vindo ao <br>GUIDE_LINE </h1>
+                <br>
+                <br>
+                <br>
+                <br>
+                
+                <h2>Aqui você encontrará:</h2>
+
+
+<!-- BOTÃO VER MAIS COM EFEITO LEGAL, CASO QUEIRA USAR DEPOIS -->
+                 <!-- <button class="cta">VER MAIS
+                   <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                   <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                   </g>
+                   </svg>
+                   <span class="btn-background"></span>
+                 </button> -->
+
+                <img src="assets/img/molina.png" alt="Welcome">
+              </div>
+              <br>
+<div class="about--options" >
+                <a class="cta" onclick="variavel=6">
+                  <h3>Rotina</h3>
+                </a>
+                <a class="cta" onclick="variavel=5">
+                  <h3>Ganhos</h3>
+                </a>
+                <a class="cta" onclick="variavel=4">
+                  <h3>Dicas</h3>
+                </a>
+              </div>
+<br>
+<br>
+              <div class="about2--options">
+                <a class="cta" onclick="variavel=3">
+                  <h3>Progresso</h3>
+                </a>
+                <a class="cta" onclick="variavel=2">
+                  <h3>Planejamento</h3>
+                </a>
+                <a class="cta" onclick="variavel=1">
+                  <h3>Campanhas</h3>
+                </a>
+              </div>
+
+            </div>
+
+
+          </li>
+
+          
+<!--  2 - ROTINA /// -->
+
+          <li class="l-section section">
+            <div class="hire">
+          
+             <div id="report">
+             
+            </div> 
+
+
+
+            </div>
+          </li>
+              
+
+
+
+<!-- 3 - GANHOS /// -->
+
+          <li class="l-section section">
+            <div class="hire">
+          
+
+             <div> <img src="assets/img/ganhos.png" alt="Welcome" style='width:110%'>
+             </div>
+          
+          </li>
+
+<!--           <li class="l-section section">
+            <div class="hire">
+          
+
+            <div on id="1pag"> <img src="assets/img/ganhos.png" alt="Welcome">
+            </div>
+            <div id="2pag" style="display: none;"> <img src="assets/img/dicas1.png" alt="Welcome">
+            </div>
+
+            <button onclick="esconder()"> Esconde </button>
+
+            </div>
+          </li> -->
+
+
+
+<!-- 4 - DICAS /// -->
+
+                    
+          <li class="l-section section">
+            <div class="hire">
+          
+
+            <div> <img src="assets/img/dicas.png" alt="Welcome">
+            </div>
+
+            </div>
+          </li>
+              
+                   
+          
+<!-- 5 - PROGRAMA DE RELACIONAMENTO /// -->
+
+ 
+          <li class="l-section section">
+            <div class="hire" >
+          
+            <div> <img src="assets/img/escalada.png" alt="Welcome" style='width:98%;'>
+            </div>
+
+            </div>
+          </li>
+              
+
+<!-- 6 - PLANEJAMENTO /// -->
+
+  <li class="l-section section">
+    <div class="hire" style="max-width: 75%">
+<section>
+  <h2>Selecione aqui seu intervalo de pausa desejado!</h2>
+  <h3>Suas atividades serão adaptadas para que mantenha seu desempenho,<br> mesmo tirando seu merecido descanso.</h3>
+<br>
+    <div class="range" style="font-size : 20px"> </div>
+ <br>
+ <button onclick="confirmar()" class= "botao"> Confirmar </button>
+</section>
+</div>
+</li>
+                    
+
+<!-- 7 - CAMPANHAS /// -->
+           
+<li class="l-section section">
+            <div class="contact">
+
+              
+              <!-- <div class="contact--lockup">
+                <div class="modal">
+                  <div class="modal--information">
+                    <p>Ranking</p>
+                  </div>
+                  <div class="rank">
+                    <table>
+                      
+                        <tr class="modal--options lab-card1">
+                          <td>Prevot</td>
+                          <td>Renato</td>
+                          <td>Vitor</td>
+                          <td>Quaquer</td>
+                        </tr>
+                      
+                       <tr class="modal--options lab-card2">
+                        <td>Prevot</td>
+                        <td>Renato</td>
+                        <td>Renato</td>
+                        <td>Renato</td>
+                      
+                        <tr class="modal--options lab-card3">
+                          <td>Prevot</td>
+                          <td>Renato</td>
+                          <td>Vitor</td>
+                          <td>Quaquer</td>
+                        </tr>
+                     
+                        <tr class="modal--options lab-card4">
+                          <td>Prevot</td>
+                          <td>Renato</td>
+                          <td>Vitor</td>
+                          <td>Quaquer</td>
+                        </tr>
+                      
+                    </table>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </li>
+                   
+
+
+
+
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ <!--  LISTA MENU PR INCIPAL DA DIREITA /// -->
+  <ul class="outer-nav">
+    <li class="is-active">Resumo</li>
+    <li>Rotina</li>
+    <li>Ganhos</li>
+    <li>Dicas</li>
+    <li>Progresso</li>
+    <li>Planejamento</li>
+    <li>Campanhas</li>
+  </ul>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-2.2.4.min.js"><\/script>')</script>
+<script src="assets/js/functions-min.js"></script>
+</body>
+</html>
