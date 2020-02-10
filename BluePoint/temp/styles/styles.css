@@ -867,9 +867,9 @@ PAG SECTION2 PAG CARTEIRA*/
 
 .price .panel:hover{
     background-color: #13BDFF;
-    border-top: 50px solid transparent;
-    border-bottom: 50px solid transparent;
-    margin-top: -50px;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    margin-top: px;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
@@ -1479,17 +1479,14 @@ body{
 label{
   position: relative;
   display: inline-block;
-  background-color: #fff;
   padding: 5px 12px;
   transition: all 1s ease;
   border-radius: 0;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.5);
   &::after{
     content: '';
     display: block;
     height: 2px;
     width: 80%;
-    background-color: #F0AD4E;
     transition: all 1s ease 0.5s;
   }
   input{
@@ -1538,7 +1535,6 @@ label{
   display: inline-block;
   width: 60px;
   height: 34px;
-  background-color: red;
 }
 
 /* Hide default HTML checkbox */
