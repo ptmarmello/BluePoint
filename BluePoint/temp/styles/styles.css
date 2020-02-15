@@ -369,6 +369,7 @@ button:focus{
     font-weight: bold;
     color: #556a87;
     margin-bottom: 25px;
+    padding-top: 40px;
   }
 
 .page-section__title--white{
@@ -864,9 +865,8 @@ PAG SECTION2 PAG CARTEIRA*/
 
 
 /*Botao iluminar*/
-
+/*
 .price .panel:hover{
-    background-color: #13BDFF;
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     margin-top: px;
@@ -887,7 +887,7 @@ PAG SECTION2 PAG CARTEIRA*/
       background-color: #FFFFFF;
       color: #00aafe;
       border: 2px solid #fff;
-    }
+    }*/
 
 .overview--bg{
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
@@ -1058,10 +1058,12 @@ PAG SECTION2 PAG CARTEIRA*/
     }
 
 .contact-two--bg{
-    -webkit-clip-path: polygon(0 40%, 100% 5%, 100% 100%, 0 100%);
-            clip-path: polygon(0 40%, 100% 5%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 36%, 100% 5%, 100% 100%, 0 100%);
+            clip-path: polygon(0 36%, 100% 5%, 100% 100%, 0 100%);
     height: 350px;
     position: relative;
+        margin-top: -50px;
+
   }
 
 .contact-two--bg:after{
@@ -1086,7 +1088,7 @@ PAG SECTION2 PAG CARTEIRA*/
 
 @media screen and (max-width: 900px) {
       .contact-two__title{
-        margin-top: 100px;
+        margin-top: 160px;
       }
     }
 
@@ -1552,7 +1554,7 @@ label{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #e02020;
   -webkit-transition: .4s;
   transition: .4s;
 }
@@ -1570,7 +1572,7 @@ label{
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2aad64;
 }
 
 input:focus + .slider {

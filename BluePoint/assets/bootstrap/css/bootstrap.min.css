@@ -1998,7 +1998,9 @@ pre code {
 	padding-right: 15px;
 	padding-left: 15px;
 	margin-right: auto;
-	margin-left: auto
+	margin-left: auto;
+	    padding-bottom: 1vh;
+
 }
 
 @media (min-width:768px) {
@@ -6307,7 +6309,7 @@ a.thumbnail:hover {
 .list-group-item {
 	position: relative;
 	display: block;
-	padding: 10px 15px;
+	padding: 18px 15px;
 	margin-bottom: -1px;
 	background-color: #fff;
 	border: 1px solid #ddd
@@ -6353,7 +6355,9 @@ button.list-group-item {
 .list-group-item.disabled:hover {
 	color: #777;
 	cursor: not-allowed;
-	background-color: #eee
+	background-color: #eee;
+	    margin-top: 55px;
+
 }
 
 .list-group-item.disabled .list-group-item-heading,
