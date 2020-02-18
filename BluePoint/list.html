@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Dart - page</title>
+  <title>Bluepoint</title>
   <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
   <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
   
@@ -105,8 +105,9 @@ var app = new Vue({
 
 
 
-<!-- icone que vira campo de pesquisa - partial:index.partial.html -->
-<form id="app" action="#" style="; padding-top: 80px;">
+<!-- icone redondo que vira campo de pesquisa - partial:index.partial.html -->
+<form id="app" action="#" style="; padding-bottom: 6px;
+    padding-top: 65px;">
 <label :data-state="state" for="search">
   <input type="text" placeholder="Search" @click="state = 'opan'" @blur="state='close'"/>
   <i class="fa fa-search" @click="" aria-hidden="true"></i>
@@ -201,22 +202,7 @@ var app = new Vue({
     
   
 
-  <script src="assets/jquery/jquery-3.2.1.min.js"></script>
-  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 
-  <script>
-    $(document).ready(function() {
-
-      var $videoSrc = $("#video").attr("src");
-
-      $('#myModal').on('hide.bs.modal', function (e) {
-        $("#video").attr('src',$videoSrc); 
-      });
-
-
-
-    });
-  </script>
 </body>
 </html>
 

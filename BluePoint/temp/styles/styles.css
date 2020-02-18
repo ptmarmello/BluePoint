@@ -1364,7 +1364,7 @@ EU ADICIONEI DAQUI PRA BAIXO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 {
   position: fixed;
   width: 100%;
-  height: 22vh;
+  height: 21vh;
   display: flex;
   justify-content: center;
 
@@ -1395,7 +1395,7 @@ EU ADICIONEI DAQUI PRA BAIXO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   padding: 0;
   text-align: center;
   position: absolute;
-  top: 12%;
+  top: 11%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
@@ -1415,7 +1415,7 @@ EU ADICIONEI DAQUI PRA BAIXO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
      border-radius: 50%;
     display: inline-block;
     position:fixed;
-    top: 23%;
+    top: 21%;
    left: 50%; 
     -webkit-transform: translate(-50%, -50%);
    -moz-transform: translate(-50%, -50%); 
@@ -1424,7 +1424,7 @@ EU ADICIONEI DAQUI PRA BAIXO ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
    transform: translate(-50%, -50%); 
     height:110px;
     width: 110px;
-        background: url("../../assets/images/c.png") no-repeat;
+        background: url("../../assets/images/Clara.png") no-repeat;
             background-size: cover;
 
 

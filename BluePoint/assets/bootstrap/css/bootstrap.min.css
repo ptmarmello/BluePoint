@@ -1382,7 +1382,13 @@ th {
 	box-sizing: border-box
 }
 
-:after,
+:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	color: #fff; /*ICON BAR COLOR*/
+}
+
 :before {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
