@@ -1,0 +1,158 @@
+{% load pwa %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+  <title>GUIDE_LINE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="HTML5 website template">
+  <meta name="keywords" content="global, template, html, sass, jquery">
+  <meta name="author" content="Bucky Maler">
+  <link rel="stylesheet" href="{% static 'Onboarding/css/main.css'%}">
+
+<!-- CALENDÁRIO -->
+
+
+</head>
+
+
+<body >
+{% progressive_web_app_meta %}
+
+
+
+
+  <div ><div class="outer-nav--return"></div>
+    <div >
+      <div class="hire">
+        <li  style="list-style-type: none;     padding-top: 5vh;
+">                    
+          <div >
+              <div>
+                <h2>Você possui filho ou filha?</h2>
+                <br>
+<!--                 <h3>Esta informação nos permitirá uma melhor personalização de sua rotina.</h3>
+ -->
+
+ <img src="{% static 'Onboarding/img/filho.png'%}" style="    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  border-radius: 30px;
+" alt="" class="undraw">
+        
+                <div class="work-request--options ">
+                  
+ <span class="options-a" style="padding-top: 4vh;">
+                    <input id="opt-11" type="radio" name="meta" value="1000" onclick="javascript: obj(1);">
+                  <!-- UM INVISIVEL PRA NAO ATRAPALHAR PAG INICIAL, NAO SEI EXPLICAR O PQ MAS DEU CERTO -->
+
+                  <span class="options-a">
+
+                    <input type="radio">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      <a style="color: white" href="{% url 'quizpage_2' %}">Sim</a>
+                    </label>
+<br>
+                      <input type="radio">
+                    <label for="opt-1">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      <a style="color: white" href="{% url 'quizpage_2' %}">Não</a>
+                    </label>
+
+    
+
+
+<style>
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+}
+</style>
+
+                    
+
+                  
+
+<!-- 
+                  <span class="options-b">
+                    <input id="opt-4" type="radio" name="meta" value="2500" onclick="javascript: obj(2500);">
+                    <label for="opt-4">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                       R$ 2.500,00
+                    </label>
+
+                    <input id="opt-5" type="radio" name="meta" value="3000" onclick="javascript: obj(3000);">
+                    <label for="opt-5">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 3.000,00
+                    </label>
+
+
+                    <input id="opt-6" type="radio" name="meta" value="3500" onclick="javascript: obj(3500);">
+                    <label for="opt-6">
+                      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      viewBox="0 0 150 111" style="enable-background:new 0 0 150 111;" xml:space="preserve">
+                      <g transform="translate(0.000000,111.000000) scale(0.100000,-0.100000)">
+                        <path d="M950,705L555,310L360,505C253,612,160,700,155,700c-6,0-44-34-85-75l-75-75l278-278L550-5l475,475c261,261,475,480,475,485c0,13-132,145-145,145C1349,1100,1167,922,950,705z"/>
+                      </g>
+                      </svg>
+                      R$ 3.500,00
+                    </label>
+ -->
+
+<!--                       <button onclick="esconder()" class= "botao"> Continuar </button>
+ -->              </div>
+          
+          </li>
+            </div>
+          </div>
+    </div>
+
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<!-- <script>window.jQuery || document.write('<script src="{% static 'Onboarding/js/vendor/jquery-2.2.4.min.js"><\/script>')</script> -->
+<script src="{% static 'Onboarding/js/functions-min.js' %}"></script>
+</body>
+</html>

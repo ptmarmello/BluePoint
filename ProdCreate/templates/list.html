@@ -1,6 +1,5 @@
 {% load pwa %}
 {% load static %}
-{% progressive_web_app_meta %}
 <!doctype html>
 <html lang="en">
 <head>
@@ -24,13 +23,17 @@
 
 
 <body>
+  {% progressive_web_app_meta %}
   <div class="main-wrapper">
 
     <nav class="navbar-default navbar-fixed-top">
-      <div class="bluepoint-nav">
-            <img class="img-responsive" style="width: 60vw; margin-left: 20vw" src="{% static 'logo.png' %}" alt="">
-    </div>
-    </nav>
+          <div class="bluepoint-nav">
+            <img class="img-responsive" style="width: 50vw; margin-left: 25vw" src="{% static 'logo.png' %}" alt="">
+
+          </div>
+
+
+      </nav>
 
     <!-- NavBar Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,7 +41,7 @@
 <div class="icon-bar navbar-fixed-bottom">
  <!-- ICON 1 --> <a href="{% url 'home' %}"><i class="fa fa-home"></i></a>
  <!-- ICON 2 --> <a class="active" href="{% url 'prodlist' %}"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
- <!-- ICON 3 --> <a href="{% url 'walletpage' user.name %}"><i class="fa fa-user"></i></a>
+ <!-- ICON 3 --> <a  href="{% url 'walletpage' user.name %}"><i class="fa fa-user"></i></a>
  <!-- ICON 4 --> <a href="{% url 'userconfig' user.name %}"><i class="glyphicon glyphicon-cog "></i></a>
 </div>
 

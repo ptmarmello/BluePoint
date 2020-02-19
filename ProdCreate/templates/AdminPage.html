@@ -1,6 +1,6 @@
 {% load pwa %}
 {% load static %}
-{% progressive_web_app_meta %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="pt-br">
 <head>
@@ -31,6 +31,7 @@
             <script src="{% static 'Seguradora/src/js/vendor/modernizr-2.8.3.min.js' %}"></script>
         </head>
         <body>
+            {% progressive_web_app_meta %}
             {% csrf_token %}
             <div class="wrapper">
                 <header class="header-top" header-theme="light">
@@ -113,20 +114,7 @@
                                     <div class="nav-item">
                                         <a href="#"><i class="ik ik-menu"></i><span>Todos os Produtos</span> <span class="badge badge-success"></span></a>
                                     </div>
-
-
-
-                            <div class="nav-lavel">Mais Elementos</div>
-                                    <div class="nav-item has-sub">
-                                        <a href="#"><i class="ik ik-gitlab"></i><span>Basico</span> <span class="badge badge-success">New</span></a>
-                                        <div class="submenu-content">
-                                            <a href="#" class="menu-item">Elemento1</a>
-                                            <a href="#" class="menu-item">Elemento2</a>
-                                            <a href="#" class="menu-item">Elemento3</a>
-                                            <a href="#" class="menu-item">Elemento4</a>
-                                            <a href="#" class="menu-item">Elemento5</a>
-                                        </div>
-                                    </div>
+                                    
                                     <div class="nav-lavel">Meus Produtos</div>
                                     <div class="nav-item has-sub">
                                         <a href="{% url 'formpage' %}"><i class="ik ik-edit"></i><span>Cadastrar Produto</span></a>
@@ -141,7 +129,7 @@
                         </div>
                     </div>
 
-                    <div class="main-content">
+                <div class="main-content">
                     <div class="container-fluid">
                         <div class="row clearfix">
                             <div class="col-lg-3 col-md-6 col-sm-12">
@@ -222,62 +210,31 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-8">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="row align-items-center">
-                                            <div class="col-lg-8 col-md-12">
-                                                <h3 class="card-title">Alguma coisa pra colocar</h3>
-                                                <div id="visitfromworld" style="width:100%; height:350px"></div>
-                                            </div>
-                                            <div class="col-lg-4 col-md-12">
-                                                <div class="row mb-15">
-                                                    <div class="col-9">Classe1</div>
-                                                    <div class="col-3 text-right">28%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-green" role="progressbar" style="width: 48%" aria-valuenow="48" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-15">
-                                                    <div class="col-9"> Classe2</div>
-                                                    <div class="col-3 text-right">21%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-aqua" role="progressbar" style="width: 33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row mb-15">
-                                                    <div class="col-9"> Classe3</div>
-                                                    <div class="col-3 text-right">18%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-purple" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="col-9">Classe4</div>
-                                                    <div class="col-3 text-right">12%</div>
-                                                    <div class="col-12">
-                                                        <div class="progress progress-sm mt-5">
-                                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 15%" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                            <div class="col-md-6">
+                                <div class="card sale-card">
+                                    <div class="card-header">
+                                        <h3>Frações de Compra</h3>
+                                    </div>
+                                    <div class="card-block">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <div id="allocation-chart" class="chart-shadow" style="min-height:400px"></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-4">
-                                <div class="card" style="min-height: 422px;">
-                                    <div class="card-header"><h3>Donut chart</h3></div>
-                                    <div class="card-body"></div>
+                            <div class="col-md-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h3>Variações no Último Mês</h3>
+                                    </div>
+                                    <div class="card-block text-center">
+                                        <div id="line_chart" class="chart-shadow" style="min-height:400px"></div>
+                                    </div>
                                 </div>
                             </div>
+                            
                         </div>
                         <div class="row">
                             <div class="col-md-4">
@@ -296,18 +253,26 @@
                                             <li class="chat-item">
                                                 <div class="chat-img"><img src="{% static 'Seguradora/img/users/1.jpg' %}" alt="user"></div>
                                                 <div class="chat-content">
-                                                    <h6 class="font-medium">Cliente1</h6>
+                                                    <h6 class="font-medium">Clara</h6>
                                                     
                                                 </div>
-                                                <!-- <div class="chat-time">10:56 am</div> -->
+                                                <div class="chat-time">3:15 p.m</div>
                                             </li>
                                             <li class="chat-item">
                                                 <div class="chat-img"><img src="{% static 'Seguradora/img/users/2.jpg' %}" alt="user"></div>
                                                 <div class="chat-content">
-                                                    <h6 class="font-medium">Cliente2</h6>
+                                                    <h6 class="font-medium">Carlos</h6>
                                                     
                                                 </div>
-                                                <!-- <div class="chat-time">10:57 am</div> -->
+                                                <div class="chat-time">2:48 p.m</div>
+                                            </li>
+                                            <li class="chat-item">
+                                                <div class="chat-img"><img src="{% static 'Seguradora/img/users/2.jpg' %}" alt="user"></div>
+                                                <div class="chat-content">
+                                                    <h6 class="font-medium">Rafael</h6>
+                                                    
+                                                </div>
+                                                <div class="chat-time">1:23 p.m</div>
                                             </li>
                                         </ul>
                                     </div> 
@@ -329,32 +294,41 @@
                                     <ul>
                                             <li>
                                                 <div class="bullet bg-pink"></div>
-                                                <div class="time">Hora1</div>
+                                                <div class="time">3:15 p.m</div>
                                                 <div class="desc">
-                                                    <h3>Produto1</h3>
-                                                    <h4>Compras</h4>
+                                                    <h3>Kangoo</h3>
+                                                    <h4>Compra</h4>
                                                 </div>
                                                 <div class="desc">
                                                     <ol>
-                                                        <h3>aaaaaaa
-                                                        </h3>
+                                                        <h3>Clara</h3>
                                                     </ol>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="bullet bg-green"></div>
-                                                <div class="time">Hora2</div>
+                                                <div class="time">2:48 p.m</div>
                                                 <div class="desc">
-                                                    <h3>Produto2</h3>
-                                                    <h4>Compras</h4>
+                                                    <h3>Radial</h3>
+                                                    <h4>Sinistro</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ol>
+                                                        <h3>Carlos</h3>
+                                                    </ol>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div class="bullet bg-orange"></div>
-                                                <div class="time">Hora3</div>
+                                                <div class="time">1:23 p.m</div>
                                                 <div class="desc">
-                                                    <h3>Produto3</h3>
-                                                    <h4>Compras</h4>
+                                                    <h3>Bolt</h3>
+                                                    <h4>Compra</h4>
+                                                </div>
+                                                <div class="desc">
+                                                    <ol>
+                                                        <h3>Rafael</h3>
+                                                    </ol>
                                                 </div>
                                             </li>
                                         </ul>
@@ -362,10 +336,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
+        </div>
             <div class="modal fade apps-modal" id="appsModal" tabindex="-1" role="dialog" aria-labelledby="appsModalLabel" aria-hidden="true" data-backdrop="false">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><i class="ik ik-x-circle"></i></button>
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -442,7 +416,7 @@
     </div>
         
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script>window.jQuery || document.write('<script src="{% static 'Seguradora/src/js/vendor/jquery-3.3.1.min.js' %}"><\/script>')</script>
+       
         <script src="{% static 'Seguradora/plugins/popper.js/dist/umd/popper.min.js'%}"></script>
         <script src="{% static 'Seguradora/plugins/bootstrap/dist/js/bootstrap.min.js'%}"></script>
         <script src="{% static 'Seguradora/plugins/perfect-scrollbar/dist/perfect-scrollbar.min.js'%}"></script>
@@ -451,17 +425,30 @@
         <script src="{% static 'Seguradora/plugins/datatables.net-bs4/js/dataTables.bootstrap4.min.js'%}"></script>
         <script src="{% static 'Seguradora/plugins/datatables.net-responsive/js/dataTables.responsive.min.js'%}"></script>
         <script src="{% static 'Seguradora/plugins/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js'%}"></script>
-        <script src="{% static 'Seguradora/plugins/jvectormap/jquery-jvectormap.min.js'%}"></script>
-        <script src="{% static 'Seguradora/plugins/jvectormap/tests/assets/jquery-jvectormap-world-mill-en.js'%}"></script>
+        <!-- <script src="{% static 'Seguradora/plugins/jvectormap/jquery-jvectormap.min.js'%}"></script> -->
+        
         <script src="{% static 'Seguradora/plugins/moment/moment.js'%}"></script>
         <script src="{% static 'Seguradora/plugins/tempusdominus-bootstrap-4/build/js/tempusdominus-bootstrap-4.min.js'%}"></script>
-        <script src="{% static 'Seguradora/plugins/d3/dist/d3.min.js'%}"></script>
-        <script src="{% static 'Seguradora/plugins/c3/c3.min.js'%}"></script>
-        <script src="{% static 'Seguradora/js/tables.js'%}"></script>
-        <script src="{% static 'Seguradora/js/widgets.js'%}"></script>
-        <script src="{% static 'Seguradora/js/charts.js'%}"></script>
-        <script src="{% static 'Seguradora/dist/js/theme.min.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/d3/dist/d3.min.js' %}"></script>
+        <script src="{% static 'Seguradora/plugins/c3/c3.min.js' %}"></script>
+        <script src="{% static 'Seguradora/js/tables.js' %}"></script>
+        <script src="{% static 'Seguradora/js/widgets.js' %}"></script>
+        <script src="{% static 'Seguradora/js/charts.js' %}"></script>
+        <script src="{% static 'Seguradora/dist/js/theme.min.js' %}"></script>
+
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+
+        <!-- SCRIPTS DOS CHARTS -->
+        <script src="{% static 'Seguradora/plugins/amcharts/amcharts.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/amcharts/gauge.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/amcharts/serial.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/amcharts/themes/light.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/amcharts/animate.min.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/amcharts/pie.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/ammap3/ammap/ammap.js'%}"></script>
+        <script src="{% static 'Seguradora/plugins/ammap3/ammap/maps/js/usaLow.js'%}"></script>
+        <script src="{% static 'Seguradora/dist/js/theme.min.js' %}"></script>
+        <script src="{% static 'Seguradora/js/chart-amcharts.js' %}"></script>
 
     </body>
 </html>

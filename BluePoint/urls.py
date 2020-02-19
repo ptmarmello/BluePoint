@@ -39,6 +39,12 @@ urlpatterns = [
     url(r'^prodpage/(?P<pk>\d+)/$',views.productpage,name='prodpage'),
     url(r'^userlogin/',views.userlogin,name='userlogin'),
     url(r'^userconfig/(?P<name>[\w.@+-]+)/$',views.configpage, name='userconfig'),
+    url(r'^onboarding/',views.onboarding,name='onboarding'),
+    url(r'^quizpage/',views.quizpage,name='quizpage'),
+    url(r'^quizpage_2/',views.quizpage_2,name='quizpage_2'),
+    url(r'^quizpage_3/',views.quizpage_3,name='quizpage_3'),
+    url(r'^quizpage_4/',views.quizpage_4,name='quizpage_4'),
+    url(r'^quizpage_5/',views.quizpage_5,name='quizpage_5'),
 
 
     #(?P<pk>[\w.@+-]+)/$

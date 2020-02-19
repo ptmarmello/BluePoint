@@ -1,6 +1,5 @@
 {% load pwa %}
 {% load static %}
-{% progressive_web_app_meta %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -124,11 +123,12 @@
 
 
 <body>
+  {% progressive_web_app_meta %}
   <div class="main-wrapper">
 
     <nav class="navbar-default navbar-fixed-top">
           <div class="bluepoint-nav">
-            <img class="img-responsive" style="width: 60vw; margin-left: 20vw" src="{% static 'logo.png' %}" alt="">
+            <img class="img-responsive" style="width: 50vw; margin-left: 25vw" src="{% static 'logo.png' %}" alt="">
           </div>
     </nav>
 
@@ -166,7 +166,7 @@
                   <!-- <form action="{{ 'user.products.add(produtos.id)' }}" >
  -->                    {% csrf_token %}
                     <button class="button--light" id="addProd"  style="float:right;">CONTRATAR</button>
-                    <button class="button--light" id="sinProd"  style="float:right; background-color: red;"><a href="#">SINISTRO</a></button>
+                    <button class="button--light" id="sinProd"  style="float:right; background-color: red; width: 40vw;"><a href="#">SINISTRO</a></button>
                   <!-- </form> -->
                 </div>
               </div>

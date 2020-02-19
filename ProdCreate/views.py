@@ -73,7 +73,7 @@ def formpage(request):
         form = ProductForm(request.POST)
         if form.is_valid():
             prods = form.save()
-            return redirect(reverse('adminpage'),{'produtos':prods,'seguradora':seg})
+            return redirect(reverse('adminpage'),{'produtos':prods,'seguradora':seg,'form':form})
     else:
         form = ProductForm()
     return render(request, 'Form Page.html',{'produtos':prods,'form':form,'seguradora':seg})
@@ -104,8 +104,26 @@ def testes(request):
         form = ProductForm()
     return render(request, 'TesteDoForms.html',{'prods':prods,'form':form,'user':user})
 
-def base_layout(request):
+def onboarding(request):
 
-    return render(request, 'TesteMaps.html')
+    return render(request, 'Onboarding.html')
+
+def quizpage(request):
+
+    return render(request, 'quiz1.html')
+
+def quizpage_2(request):
+
+    return render(request, 'quiz2.html')
+def quizpage_3(request):
+
+    return render(request, 'quiz3.html')
+def quizpage_4(request):
+
+    return render(request, 'quiz4.html')
+
+def quizpage_5(request):
+
+    return render(request, 'quiz5.html')
 
 
