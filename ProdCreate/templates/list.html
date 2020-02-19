@@ -1,0 +1,109 @@
+{% load pwa %}
+{% load static %}
+{% progressive_web_app_meta %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bluepoint</title>
+  <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'assets/flat-icon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'temp/styles/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'temp/untitled.css' %}">
+
+<!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+</head>
+
+
+
+<body>
+  <div class="main-wrapper">
+
+    <nav class="navbar-default navbar-fixed-top">
+      <div class="bluepoint-nav">
+            <img class="img-responsive" style="width: 60vw; margin-left: 20vw" src="{% static 'logo.png' %}" alt="">
+    </div>
+    </nav>
+
+    <!-- NavBar Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="icon-bar navbar-fixed-bottom">
+ <!-- ICON 1 --> <a href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+ <!-- ICON 2 --> <a class="active" href="{% url 'prodlist' %}"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
+ <!-- ICON 3 --> <a href="{% url 'walletpage' user.name %}"><i class="fa fa-user"></i></a>
+ <!-- ICON 4 --> <a href="{% url 'userconfig' user.name %}"><i class="glyphicon glyphicon-cog "></i></a>
+</div>
+
+<!-- icone redondo que vira campo de pesquisa - partial:index.partial.html -->
+<form id="app" action="#" style="padding-bottom: 6px;
+    padding-top: 65px;">
+<label :data-state="state" for="search">
+  <input type="text" placeholder="Search" @click="state = 'open'" @blur="state='close'"/>
+  <i class="fa fa-search" @click="" aria-hidden="true"></i>
+</label>
+</form>
+
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js'></script><script  src="{% static 'temp/untitled.js' %}"></script>
+
+
+
+
+      <div class="container">
+        <section class="project">
+          <div class="page-section">
+            <div class="row gutters-30">
+              <div class="col-md-4">
+                <div class="thumbnail">
+                  <a href="#">
+                    <img class="img-responsive"  src="{% static 'assets/images/kangoo.png' %}" alt="">
+                    <div class="caption">
+                      <h4 class="project__title">Kangoo</h4>
+                      <p class="project__paragraph">Um seguro que vai trazer mais tranquilidade para sua gravidez.
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {% csrf_token %}
+             {% for produtos in produtos %}
+                <div class="col-md-4"   style="padding-top: 3.25vh;">
+                <div class="thumbnail">
+                  <a href="{% url 'prodpage' produtos.pk %}">
+                    <img class="img-responsive"  src="{% static 'assets/images/kangoo.png' %}" alt="">
+                    <div class="caption">
+                      <h4 class="project__title">{{produtos.name}}</h4>
+                      <p class="project__paragraph">{{produtos.product_desc}}
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {% endfor %}
+              
+
+
+
+
+
+
+            </div>
+          </div>
+        </section>
+      </div>
+
+</body>
+</html>
+
+
+
+
+

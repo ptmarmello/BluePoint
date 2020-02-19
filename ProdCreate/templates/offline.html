@@ -1,0 +1,81 @@
+{% load pwa %}
+{% load static %}
+<!doctype html>
+<html lang="pt-br">
+<head>
+  {% progressive_web_app_meta %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bluepoint</title>
+  <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  
+  <link rel="manifest" href="/manifest.json">
+
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/flat-icon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'temp/styles/styles.css' %}">
+  
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <nav class="navbar-default navbar-fixed-top">
+          <div class="bluepoint-nav">
+            <img class="img-responsive" style="width: 60vw; margin-left: 20vw" src="{% static 'logo.png' %}" alt="">
+          </div>
+      </nav>
+
+<!-- 
+Primeira area da pag inicial -->
+    <header class="header header--bg">
+      <div class="container">
+        <div class="header__content text-center">
+          <h1 class="header__content__title animated fadeInUp">PROTEJA-SE DE IMPREVISTOS</h1>
+          <p class="header__content__paragraph">Soluções inteligentes seu dia a dia. Evite o desperdício de recursos com produtos on demand de tradicionais seguradoras do mercado</p>
+          <a class="button  button--hover" href="{% url 'prodlist' %}">VER TODOS</a>
+        </div>
+      </div>
+    </header>
+    
+
+
+
+    <!-- NavBar Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="icon-bar navbar-fixed-bottom">
+ <!-- ICON 1 --> <a class="active" href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+ <!-- ICON 2 --> <a href="{% url 'prodlist' %}"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
+ <!-- ICON 3 --> <a href="{% url 'walletpage' user.name %}"><i class="fa fa-user"></i></a>
+ <!-- ICON 4 --> <a href="{% url 'userconfig' user.name %}"><i class="glyphicon glyphicon-cog "></i></a>
+</div>
+
+
+<!-- 
+segunda parte da pag inicial -->
+      <section class="contact-two contact-two--bg">
+        <div class="container" style="padding-bottom: 35px;">
+          <div class="page-section text-center">
+            <h2 class="contact-two__title">Produtos recomendados para você e sua família</h2>
+            <a class="button contact-two__button button--hover" href="#">CONHECER SUGESTÕES</a>
+          </div>
+        </div>
+      </section>
+      
+    
+  
+
+
+</body>
+</html>
+
+
+
+
+

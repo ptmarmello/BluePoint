@@ -1,0 +1,146 @@
+{% load pwa %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bluepoint</title>
+  <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  
+  <link rel="manifest" href="/manifest.json">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'assets/flat-icon/flaticon.css' %}">
+  <link rel="stylesheet" href="{% static 'temp/styles/styles.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/bootstrap-toggle-master/css/bootstrap-toggle.min.css' %}">
+  <script src="{% static 'assets/bootstrap-toggle-master/js/bootstrap-toggle.min.js' %}"></script>
+
+
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+
+</head>
+<body>
+  {% progressive_web_app_meta %}
+  <div class="main-wrapper">
+
+    <nav class="navbar-default navbar-fixed-top">
+          <div class="bluepoint-nav">
+            <img class="img-responsive" style="width: 50vw; margin-left: 25vw" src="{% static 'logo.png' %}" alt="">
+
+          </div>
+
+
+      </nav>
+
+      
+    <!-- NavBar Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="icon-bar navbar-fixed-bottom">
+ <!-- ICON 1 --> <a href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+ <!-- ICON 2 --> <a href="{% url 'prodlist' %}"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
+ <!-- ICON 3 --> <a class="active" href="{% url 'walletpage' user.name %}"><i class="fa fa-user"></i></a>
+ <!-- ICON 4 --> <a href="{% url 'userconfig' user.name %}"><i class="glyphicon glyphicon-cog "></i></a>
+</div>
+
+
+<!-- esfera azul fixa fundo da tela
+ -->
+      <section>  
+        <div class="roundedsection">
+ </div>
+      </section>
+      <section>
+                <h2  class="header__content__title2" style="padding-bottom: 3vh; margin-top: 6vh;">Olá,{{user.name}}!</h2>
+      </section>
+<!-- foto redonda da clara -->
+           <section>
+                        <div style="margin-top: 5vh;" class="fotoperfil"></div>
+           </section>
+      <div class="container" style="padding-top: 220px;">
+        <section class="price">
+            <div class="price__panel-wrapper">
+              <div class="row gutters-10">
+                <div class="col-md-4">
+                  <div class="panel text-center" style="padding-bottom: 3.25vh;">
+                    <div class="panel-heading">
+                      <h4>Saldo</h4>
+                      <h1>B$ {{user.saldo_num}},00</h1>
+                    </div>
+                    <div>
+                  </div>
+                  <a style="" class="panel__button" href="{% url 'prodlist' %}">COMPRAR MAIS</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+      
+
+
+
+      <div class="container" >
+        <section class="price">
+          <h1 class="page-section__title text-center-2">
+            Seus produtos:
+          </h1>
+            <div class="price__panel-wrapper">
+              <div class="row gutters-10">
+                <div class="col-md-4">
+                  <div class="panel text-center">
+                    <div class="panel-heading" >
+                      <h4 class="project__title" style="text-align: left;">Kangoo</h4>
+                  <h4 class="project__paragraph" style="text-align: left;">Um seguro que vai trazer mais tranquilidade para sua gravidez.</h4>
+                  <!-- Rounded switch -->
+                </div>
+
+                    <div>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                    </div>
+                    
+                </div>
+              </div>
+              {% csrf_token %}
+            {% for produtos in produtos %}
+              <div class="col-md-4">
+                  <div class="panel text-center">
+                    <div class="panel-heading" >
+                      <h4 class="project__title" style="text-align: left;"><a class="project__title" href="{% url 'prodpage' produtos.pk %}">{{produtos.name}}</a></h4>
+                  <h4 class="project__paragraph" style="text-align: left;">{{produtos.product_desc}}</h4>
+                  <!-- Rounded switch -->
+                </div>
+
+                    <div>
+                    <label class="switch">
+                      <input type="checkbox">
+                      <span class="slider round"></span>
+                    </label>
+                    </div>
+                    
+                </div>
+              </div>
+              {% endfor %}
+
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+</body>
+</html>
+
+
+
+
+

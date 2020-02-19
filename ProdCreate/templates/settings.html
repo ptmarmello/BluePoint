@@ -1,0 +1,67 @@
+{% load pwa %}
+{% load static %}
+{% progressive_web_app_meta %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bluepoint</title>
+  <meta name="keywords" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.">
+  
+  <link rel="stylesheet" href="{% static 'assets/bootstrap/css/bootstrap.min.css'%}">
+  <link rel="stylesheet" href="{% static 'assets/flat-icon/flaticon.css'%}">
+  <link rel="stylesheet" href="{% static 'temp/styles/styles.css'%}">
+
+  <!-- Animate.css -->
+  <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+
+
+</head>
+<body>
+  <div class="main-wrapper">
+
+    <nav class="navbar-default navbar-fixed-top">
+          <div class="bluepoint-nav">
+            <img class="img-responsive" style="width: 60vw; margin-left: 20vw" src="{% static 'logo.png' %}" alt="">
+          </div>
+      </nav>
+
+
+
+
+    <div class="list-group">
+<!--   <a href="#" class="list-group-item list-group-item-action active">
+    Cras justo odio
+  </a> -->
+  <p href="#" class="list-group-item list-group-item-action disabled" tabindex="-1" aria-disabled="true"> <span style="font-weight: bold; font-size: 25px"> Olá, Clara!</span><br><span style="color: #1a8cff;"><a style="color: #1a8cff;" href="{% url 'userlogin' %}">SAIR</span></p>
+  <a href="#" class="list-group-item list-group-item-action">Seus dados</a>
+  <a href="#" class="list-group-item list-group-item-action">Registro de compras</a>
+  <a href="#" class="list-group-item list-group-item-action">Avalie nosso aplicativo</a>
+  <a href="#" class="list-group-item list-group-item-action">Central de relacionamento</a>
+  <a href="#" class="list-group-item list-group-item-action">Sobre o aplicativo</a>
+</div>
+
+    <!-- NavBar Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div class="icon-bar navbar-fixed-bottom">
+ <!-- ICON 1 --> <a href="{% url 'home' %}"><i class="fa fa-home"></i></a>
+ <!-- ICON 2 --> <a href="{% url 'prodlist' %}"><i class="glyphicon glyphicon-menu-hamburger"></i></a>
+ <!-- ICON 3 --> <a href="{% url 'walletpage' user.name %}"><i class="fa fa-user"></i></a>
+ <!-- ICON 4 --> <a class="active" href="{% url 'userconfig' user.name %}"><i class="glyphicon glyphicon-cog "></i></a>
+</div>
+
+
+
+    
+  
+
+</body>
+</html>
+
+
+
+
+
